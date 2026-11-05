@@ -1,11 +1,7 @@
-
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import api from "../api/axios";
 import { Link } from "react-router-dom";
 import "./Resource.css";
-
-const API_URL = "import.meta.env.VITE_BASE_URL";
-
 function Resource() {
     const [resources, setResources] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -14,17 +10,7 @@ function Resource() {
         try {
             setLoading(true);
             setError("");
-
-            const token = localStorage.getItem("token");
-
-            const response = await axios.get(
-                `${API_URL}/api/student/resources`,
-                {
-                    headers: {
-                        Authorization: `Bearer ${token}`
-                    }
-                }
-            );
+            const response = await api.get("/student/resources");
 
             const data = response.data;
 

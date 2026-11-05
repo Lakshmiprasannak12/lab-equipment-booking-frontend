@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import api from "../api/axios";
 import { useLocation, useNavigate, Link } from "react-router-dom";
 import "./Booking.css";
-const API_URL = "import.meta.env.VITE_BASE_URL";
 function Booking() {
     const location = useLocation();
     const navigate = useNavigate();
@@ -19,14 +18,7 @@ function Booking() {
     const getResources = async () => {
         try {
             const token = localStorage.getItem("token");
-                        const response = await axios.get(
-                    `${API_URL}/api/student/resources`,
-                    {
-                        headers: {
-                            Authorization: `Bearer ${token}`
-                        }
-                    }
-                );
+            const response = await api.get("/student/resources");
             const data = response.data;
             const resourceList = Array.isArray(data)
                 ? data
@@ -54,7 +46,7 @@ function Booking() {
         }
         try {
             setLoading(true);
-            const token = localStorage.getItem("token");
+          
             const bookingData = {
                 resource: resource,
                 bookingDate: bookingDate,
@@ -62,15 +54,7 @@ function Booking() {
                 endTime: endTime,
                 purpose: purpose.trim()
             };
-            const response = await axios.post(
-                `${API_URL}/api/student/booking`,
-                bookingData,
-                {
-                    headers: {
-                        Authorization: `Bearer ${token}`
-                    }
-                }
-            );
+            const response = await api.post("/student/booking", bookingData);
             setMessage(
                 response.data.message || "Booking request submitted successfully!"
             );
