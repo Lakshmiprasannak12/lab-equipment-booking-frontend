@@ -4,7 +4,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import "./Resource.css";
 
-const API_URL = "http://localhost:5000";
+const API_URL = "import.meta.env.VITE_BASE_URL";
 
 function Resource() {
     const [resources, setResources] = useState([]);
