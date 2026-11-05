@@ -1,0 +1,229 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+}
+
+/* Navbar */
+
+.navbar {
+  background-color: #183b56;
+  color: white;
+  padding: 18px 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.navbar h2 {
+  font-size: 23px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.nav-links a:hover {
+  color: #ffd166;
+}
+
+.logout-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 9px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Common buttons */
+
+button {
+  background-color: #183b56;
+  color: white;
+  border: none;
+  padding: 11px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #286090;
+}
+
+/* Forms */
+
+.form-container {
+  width: 90%;
+  max-width: 420px;
+  margin: 60px auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px #ddd;
+}
+
+.form-container h2 {
+  text-align: center;
+  color: #183b56;
+  margin-bottom: 25px;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.form-container button,
+.booking-form button {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.form-container p {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.form-container a {
+  color: #183b56;
+}
+
+/* Dashboard */
+
+.dashboard {
+  padding: 40px;
+  text-align: center;
+}
+
+.dashboard h1,
+.page h1 {
+  color: #183b56;
+  margin-bottom: 15px;
+}
+
+.dashboard h3 {
+  margin-bottom: 30px;
+}
+
+.dashboard-cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.dashboard-card {
+  background-color: white;
+  width: 280px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #ddd;
+}
+
+.dashboard-card h2 {
+  color: #183b56;
+  margin-bottom: 15px;
+}
+
+.dashboard-card p {
+  margin-bottom: 20px;
+}
+
+.dashboard-card a {
+  display: inline-block;
+  background-color: #183b56;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Pages and cards */
+
+.page {
+  padding: 35px;
+}
+
+.resource-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 25px 0;
+}
+
+.card {
+  background-color: white;
+  width: 280px;
+  padding: 22px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #ddd;
+}
+
+.card h3 {
+  color: #183b56;
+  margin-bottom: 15px;
+}
+
+.card p {
+  margin-bottom: 12px;
+}
+
+.card button {
+  margin: 5px 5px 5px 0;
+}
+
+.reject-btn {
+  background-color: #e74c3c;
+}
+
+.reject-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Booking form */
+
+.booking-form {
+  background-color: white;
+  width: 90%;
+  max-width: 500px;
+  padding: 25px;
+  margin: 30px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #ddd;
+}
+
+.booking-form h2 {
+  color: #183b56;
+  margin-bottom: 20px;
+}
+
+.booking-form label {
+  display: block;
+  margin-bottom: 8px;
+}
+

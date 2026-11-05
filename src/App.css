@@ -1,0 +1,16 @@
+body {
+  background-color: #fdfeff;
+  font-family: Arial, sans-serif;
+  color: #333;
+  box-sizing: border-box;
+}
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+.page-content {
+  flex: 1;
+  min-width: 0;
+  padding: 25px;
+  background-color: #fdfeff;
+}
