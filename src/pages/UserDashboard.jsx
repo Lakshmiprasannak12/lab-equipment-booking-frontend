@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import api from "../api/axios";
 import { Link } from "react-router-dom";
 import "./UserDashboard.css";
-const API_URL = "import.meta.env.VITE_BASE_URL";
+// const API_URL = "import.meta.env.VITE_BASE_URL";
 function UserDashboard() {
     const [bookings, setBookings] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -18,14 +18,7 @@ function UserDashboard() {
                 setBookings([]);
                 return;
             }
-            const response = await axios.get(
-                `${API_URL}/api/student/my-bookings`,
-                {
-                    headers: {
-                        Authorization: `Bearer ${token}`
-                    }
-                }
-            );
+            const response = await api.get("/student/my-bookings");
             setBookings(response.data.bookings || []);
         } catch (error) {
             setBookings([]);
@@ -48,15 +41,7 @@ function UserDashboard() {
         try {
             setError("");
             setMessage("");
-            await axios.patch(
-                `${API_URL}/api/student/booking/${id}/cancel`,
-                {},
-                {
-                    headers: {
-                        Authorization: `Bearer ${token}`
-                    }
-                }
-            );
+           await api.patch(`/student/booking/${id}/cancel`, {});
             setMessage("Booking cancelled successfully");
             await getBookings();
         } catch (error) {
