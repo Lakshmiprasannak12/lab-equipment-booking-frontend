@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useLocation, useNavigate, Link } from "react-router-dom";
 import "./Booking.css";
-const API_URL = "http://localhost:5000";
+const API_URL = `{import.meta.env.VITE_BASE_URL}`;
 function Booking() {
     const location = useLocation();
     const navigate = useNavigate();

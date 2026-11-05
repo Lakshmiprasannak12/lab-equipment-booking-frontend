@@ -14,7 +14,7 @@ function Login() {
         try {
             setLoading(true);
             const response = await axios.post(
-                "http://localhost:5000/api/auth/login",
+            `{import.meta.env.VITE_BASE_URL}`,
                 {
                     email,
                     password

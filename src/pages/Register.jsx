@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -24,7 +23,7 @@ function Register() {
             setLoading(true);
 
             const response = await axios.post(
-                "http://localhost:5000/api/auth/register",
+                `{import.meta.env.VITE_BASE_URL}/api/auth/register`,
                 {
                     name,
                     email,

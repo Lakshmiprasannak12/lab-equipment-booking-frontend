@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "./UserDashboard.css";
-const API_URL = "http://localhost:5000";
+const API_URL = `{import.meta.env.VITE_BASE_URL}`;
 function UserDashboard() {
     const [bookings, setBookings] = useState([]);
     const [loading, setLoading] = useState(true);
